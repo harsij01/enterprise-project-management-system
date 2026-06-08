@@ -137,7 +137,6 @@ The system consists of five main models:
 
 Represents a registered user of the system.
 
-```bash
 | Field | Type | Description |
 |-------|------|------------|
 | id | Integer (PK) | Unique user ID |
@@ -145,7 +144,6 @@ Represents a registered user of the system.
 | email | String(100) | Unique email address |
 | role | String(20) | User role (`admin` or `member`) |
 | password_hash | String(300) | Hashed password |
-```
 
 #### Relationships
 - Many-to-many with **Project** (project members)
@@ -155,7 +153,6 @@ Represents a registered user of the system.
 
 Represents a project containing multiple tasks.
 
-```bash
 | Field | Type | Description |
 |-------|------|------------|
 | id | Integer (PK) | Unique project ID |
@@ -163,7 +160,6 @@ Represents a project containing multiple tasks.
 | description | String(300) | Project description |
 | created_by | Integer (FK → User.id) | Project creator |
 | created_at | DateTime | Creation timestamp |
-```
 
 #### Relationships
 - Many-to-many with **User** (project members)
@@ -178,7 +174,6 @@ Represents a project containing multiple tasks.
 
 Represents a task within a project.
 
-```bash
 | Field | Type | Description |
 |-------|------|------------|
 | id | Integer (PK) | Unique task ID |
@@ -190,7 +185,6 @@ Represents a task within a project.
 | status | String(50) | Task status (`To Do`, `In Progress`, `Done`) |
 | deadline | DateTime | Due date |
 | project_id | Integer (FK → Project.id) | Associated project |
-```
 
 #### Relationships
 - Belongs to one **Project**
@@ -205,7 +199,6 @@ Represents a task within a project.
 
 Tracks actions performed within a project.
 
-```bash
 | Field | Type | Description |
 |-------|------|------------|
 | id | Integer (PK) | Unique log ID |
@@ -213,7 +206,6 @@ Tracks actions performed within a project.
 | timestamp | DateTime | When action occurred |
 | user_id | Integer (FK → User.id) | Who performed the action |
 | project_id | Integer (FK → Project.id) | Related project |
-```
 
 #### Relationships
 - Belongs to one **User**
