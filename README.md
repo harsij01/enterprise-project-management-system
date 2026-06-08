@@ -8,6 +8,17 @@ A full-stack project management web application built with Flask, SQLAlchemy, an
 
 ---
 
+## Demo Accounts
+
+The following accounts are pre-seeded for testing purposes:
+
+| Role | Email | Password |
+| ------ | ---------------------- | --------------- |
+| Admin | adminuser01@gmail.com | Tz7!wBqY3&hNcV6* |
+| Normal | normaluser01@gmail.com | L!ji.8fsCV5d4Ld |
+
+---
+
 ## Features
 ### Authentication & Security
 
